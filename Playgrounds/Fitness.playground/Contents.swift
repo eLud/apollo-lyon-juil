@@ -46,8 +46,49 @@ class User: Person {
     var weight: Double
     let birthDate: Date
     var restingHeartRate: Int?
-    var preferedActivity: String?
-    var lastActivities: [String]
+    var preferedActivity: Activity?
+    var lastActivities: [Activity]
+
+    var totalCalories: Int {
+
+        // Transforme une sequence en une autre d'un autre type de même taille
+        let tabCal = lastActivities.map { (activity) -> Int in
+            return activity.calories
+        }
+
+        // Trouve le max d'une collection
+        let max = lastActivities.max { (act1, act2) -> Bool in
+            return act1.calories < act2.calories
+        }
+
+        // Transforme une sequence en une autre d'un autre type de taille potentiellement différente
+        let yogaCal = lastActivities.compactMap { (activity) -> Int? in
+            guard activity is Yoga else { return nil }
+            return activity.calories
+        }
+
+        // Combine les éléments d'une sequence en un autre élément
+        return lastActivities.reduce(0) { (lastResult, activity) -> Int in
+            return lastResult+activity.calories
+        }
+    }
+
+    var bestOutdoorActivities: [Activity] {
+        let outdoor = lastActivities.filter { (activity) -> Bool in
+            return !activity.isIndoor
+        }
+        let orderedActivities = outdoor.sorted { (a1, a2) in
+            return a1.calories > a2.calories
+        }
+        return orderedActivities
+    }
+
+    var bestActivities: [Activity] {
+        let orderedActivities = lastActivities.sorted { (a1, a2) in
+            return a1.calories > a2.calories
+        }
+        return orderedActivities
+    }
 
     init(gender: Gender, pseudo: String, weight: Double, height: Double, birthDate: Date) {
         self.gender = gender
@@ -57,7 +98,6 @@ class User: Person {
         self.birthDate = birthDate
 
         restingHeartRate = nil
-        preferedActivity = ""
         lastActivities = []
     }
 }
@@ -90,7 +130,7 @@ extension Activity {
         guard let user = User.current, let restingHeartRate = user.restingHeartRate else { return .unknown }
 
         let maxRecommendHeartRate = 200-user.age
-        let delta = heartRate - restingHeartRate
+        let delta = maxRecommendHeartRate - restingHeartRate
         let third = delta / 3
 
         switch heartRate {
@@ -143,7 +183,6 @@ struct Football: Activity, Collective {
     let startDate: Date
     var endDate: Date
     var heartRate: Int
-    var calories: Int
 
     var team: [Friend]
 }
@@ -160,10 +199,19 @@ User.current = me
 
 let startDate = Date()
 let endDate = startDate.addingTimeInterval(1800)
-let yoga = Yoga(startDate: startDate, endDate: endDate, heartRate: 200)
 
-yoga.intensity
-yoga.calories
+let yoga = Yoga(startDate: startDate, endDate: endDate, heartRate: 60)
+let yoga2 = Yoga(startDate: startDate, endDate: endDate, heartRate: 150)
+let yoga3 = Yoga(startDate: startDate, endDate: endDate, heartRate: 120)
+let yoga4 = Yoga(startDate: startDate, endDate: endDate, heartRate: 110)
+let yoga5 = Yoga(startDate: startDate, endDate: endDate, heartRate: 180)
+let foot = Football(isIndoor: false, startDate: startDate, endDate: endDate, heartRate: 150, team: [])
+
+me.lastActivities = [yoga, yoga2, yoga3, yoga4, yoga5, foot]
+me.bestOutdoorActivities
+
+me.bestActivities
+me.totalCalories
 
 struct Climbing: Activity {
     let name: String = "Climbing"
@@ -191,4 +239,29 @@ extension Climbing: Equatable {
 }
 
 
+let tabString = ["maison", "téléphone", "vélo"]
+let sorted = tabString.sorted(by: <)
+sorted
 
+
+func repete(time: Int, closure: (Int)->() ) {
+    for i in 0...time {
+        closure(i)
+    }
+}
+
+repete(time: 10) { (param) in
+    print("J'en suis à l'iteration \(param)")
+}
+
+func mySorted(tab: [String], isOrderedBefore: (String, String) -> Bool) -> [String] {
+    var ordered = tab
+    // recupère 2 éléments a comparer
+    let a = ordered[0]
+    let b = ordered[1]
+
+    if !isOrderedBefore(a, b) {
+        ordered.swapAt(0, 1)
+    }
+    return ordered
+}
