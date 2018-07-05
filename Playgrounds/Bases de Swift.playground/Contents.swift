@@ -282,3 +282,42 @@ number
 //        }
 
 //let nilCoalescingOperator = component.year ?? 0
+
+
+
+class Client {
+
+    let name: String
+    var creditCard: CreditCard?
+
+    init(name: String) {
+        self.name = name
+    }
+
+    deinit {
+        print("Deinited " + name)
+    }
+}
+
+class CreditCard {
+
+    unowned let owner: Client
+    let number: String
+
+
+    init(owner: Client, number: String) {
+        self.owner = owner
+        self.number = number
+    }
+
+    deinit {
+        print("Deinited card")
+    }
+}
+
+var me: Client? = Client(name: "Ludovic")
+let creditCard = CreditCard(owner: me!, number: "123456789")
+me?.creditCard = creditCard
+
+me = nil
+
