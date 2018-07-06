@@ -12,6 +12,17 @@
 		3304614120EE251400D574C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3304613F20EE251400D574C8 /* Main.storyboard */; };
 		3304614320EE251600D574C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3304614220EE251600D574C8 /* Assets.xcassets */; };
 		3304614620EE251600D574C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3304614420EE251600D574C8 /* LaunchScreen.storyboard */; };
+		337EAA9920EF964E003038D1 /* OnboardingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337EAA9820EF964E003038D1 /* OnboardingTableViewController.swift */; };
+		337EAA9D20EF97A3003038D1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337EAA9C20EF97A3003038D1 /* User.swift */; };
+		337EAA9F20EF97B4003038D1 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337EAA9E20EF97B4003038D1 /* Person.swift */; };
+		337EAAA120EF97C2003038D1 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337EAAA020EF97C2003038D1 /* Friend.swift */; };
+		337EAAA320EF97D4003038D1 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337EAAA220EF97D4003038D1 /* Activity.swift */; };
+		337EAAA520EF97DE003038D1 /* Yoga.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337EAAA420EF97DE003038D1 /* Yoga.swift */; };
+		337EAAA720EF97E4003038D1 /* Running.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337EAAA620EF97E4003038D1 /* Running.swift */; };
+		337EAAA920EF97F0003038D1 /* Football.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337EAAA820EF97F0003038D1 /* Football.swift */; };
+		337EAAAB20EF9808003038D1 /* Climbing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337EAAAA20EF9808003038D1 /* Climbing.swift */; };
+		337EAAAD20EF9839003038D1 /* AdditionalProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337EAAAC20EF9839003038D1 /* AdditionalProtocols.swift */; };
+		337EAAAF20EF987C003038D1 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337EAAAE20EF987C003038D1 /* Date+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +33,17 @@
 		3304614220EE251600D574C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3304614520EE251600D574C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3304614720EE251600D574C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		337EAA9820EF964E003038D1 /* OnboardingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTableViewController.swift; sourceTree = "<group>"; };
+		337EAA9C20EF97A3003038D1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		337EAA9E20EF97B4003038D1 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		337EAAA020EF97C2003038D1 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		337EAAA220EF97D4003038D1 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		337EAAA420EF97DE003038D1 /* Yoga.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yoga.swift; sourceTree = "<group>"; };
+		337EAAA620EF97E4003038D1 /* Running.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Running.swift; sourceTree = "<group>"; };
+		337EAAA820EF97F0003038D1 /* Football.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Football.swift; sourceTree = "<group>"; };
+		337EAAAA20EF9808003038D1 /* Climbing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Climbing.swift; sourceTree = "<group>"; };
+		337EAAAC20EF9839003038D1 /* AdditionalProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalProtocols.swift; sourceTree = "<group>"; };
+		337EAAAE20EF987C003038D1 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +77,48 @@
 			isa = PBXGroup;
 			children = (
 				3304613B20EE251400D574C8 /* AppDelegate.swift */,
-				3304613D20EE251400D574C8 /* ViewController.swift */,
+				337EAA9A20EF9742003038D1 /* ViewControllers */,
+				337EAA9B20EF974E003038D1 /* Models */,
+				337EAAB020EF9886003038D1 /* Extensions */,
 				3304613F20EE251400D574C8 /* Main.storyboard */,
 				3304614220EE251600D574C8 /* Assets.xcassets */,
 				3304614420EE251600D574C8 /* LaunchScreen.storyboard */,
 				3304614720EE251600D574C8 /* Info.plist */,
 			);
 			path = Fitness;
+			sourceTree = "<group>";
+		};
+		337EAA9A20EF9742003038D1 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3304613D20EE251400D574C8 /* ViewController.swift */,
+				337EAA9820EF964E003038D1 /* OnboardingTableViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		337EAA9B20EF974E003038D1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				337EAAA220EF97D4003038D1 /* Activity.swift */,
+				337EAAAC20EF9839003038D1 /* AdditionalProtocols.swift */,
+				337EAAAA20EF9808003038D1 /* Climbing.swift */,
+				337EAAA820EF97F0003038D1 /* Football.swift */,
+				337EAAA020EF97C2003038D1 /* Friend.swift */,
+				337EAA9E20EF97B4003038D1 /* Person.swift */,
+				337EAAA620EF97E4003038D1 /* Running.swift */,
+				337EAA9C20EF97A3003038D1 /* User.swift */,
+				337EAAA420EF97DE003038D1 /* Yoga.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		337EAAB020EF9886003038D1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				337EAAAE20EF987C003038D1 /* Date+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,7 +200,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				337EAAA920EF97F0003038D1 /* Football.swift in Sources */,
+				337EAA9F20EF97B4003038D1 /* Person.swift in Sources */,
+				337EAA9D20EF97A3003038D1 /* User.swift in Sources */,
+				337EAAAF20EF987C003038D1 /* Date+Extensions.swift in Sources */,
+				337EAAA320EF97D4003038D1 /* Activity.swift in Sources */,
+				337EAAAB20EF9808003038D1 /* Climbing.swift in Sources */,
 				3304613E20EE251400D574C8 /* ViewController.swift in Sources */,
+				337EAAAD20EF9839003038D1 /* AdditionalProtocols.swift in Sources */,
+				337EAAA720EF97E4003038D1 /* Running.swift in Sources */,
+				337EAAA120EF97C2003038D1 /* Friend.swift in Sources */,
+				337EAAA520EF97DE003038D1 /* Yoga.swift in Sources */,
+				337EAA9920EF964E003038D1 /* OnboardingTableViewController.swift in Sources */,
 				3304613C20EE251400D574C8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
