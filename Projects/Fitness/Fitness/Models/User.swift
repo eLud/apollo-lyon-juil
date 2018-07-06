@@ -12,7 +12,8 @@ class User: Person {
 
     static var current: User?
 
-    enum Gender {
+    // enum avec raw value
+    enum Gender: Int {
         case male
         case female
         case unknown
