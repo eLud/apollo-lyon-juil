@@ -1,0 +1,2 @@
+## Slides Apple Everyone can code
+https://developer.apple.com/go/?id=app-dev-swift-teacher-swift-4
