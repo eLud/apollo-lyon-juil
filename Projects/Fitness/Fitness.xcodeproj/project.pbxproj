@@ -23,6 +23,8 @@
 		337EAAAB20EF9808003038D1 /* Climbing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337EAAAA20EF9808003038D1 /* Climbing.swift */; };
 		337EAAAD20EF9839003038D1 /* AdditionalProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337EAAAC20EF9839003038D1 /* AdditionalProtocols.swift */; };
 		337EAAAF20EF987C003038D1 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337EAAAE20EF987C003038D1 /* Date+Extensions.swift */; };
+		337EAAB220EFBA03003038D1 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337EAAB120EFBA03003038D1 /* TodayViewController.swift */; };
+		33A3B81B20EFC2E70071FE28 /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A3B81A20EFC2E70071FE28 /* ActivityTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		337EAAAA20EF9808003038D1 /* Climbing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Climbing.swift; sourceTree = "<group>"; };
 		337EAAAC20EF9839003038D1 /* AdditionalProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalProtocols.swift; sourceTree = "<group>"; };
 		337EAAAE20EF987C003038D1 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		337EAAB120EFBA03003038D1 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		33A3B81A20EFC2E70071FE28 /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				3304613B20EE251400D574C8 /* AppDelegate.swift */,
+				33A3B81920EFC2C60071FE28 /* Views */,
 				337EAA9A20EF9742003038D1 /* ViewControllers */,
 				337EAA9B20EF974E003038D1 /* Models */,
 				337EAAB020EF9886003038D1 /* Extensions */,
@@ -93,6 +98,7 @@
 			children = (
 				3304613D20EE251400D574C8 /* ViewController.swift */,
 				337EAA9820EF964E003038D1 /* OnboardingTableViewController.swift */,
+				337EAAB120EFBA03003038D1 /* TodayViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -119,6 +125,14 @@
 				337EAAAE20EF987C003038D1 /* Date+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		33A3B81920EFC2C60071FE28 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				33A3B81A20EFC2E70071FE28 /* ActivityTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,12 +216,14 @@
 			files = (
 				337EAAA920EF97F0003038D1 /* Football.swift in Sources */,
 				337EAA9F20EF97B4003038D1 /* Person.swift in Sources */,
+				33A3B81B20EFC2E70071FE28 /* ActivityTableViewCell.swift in Sources */,
 				337EAA9D20EF97A3003038D1 /* User.swift in Sources */,
 				337EAAAF20EF987C003038D1 /* Date+Extensions.swift in Sources */,
 				337EAAA320EF97D4003038D1 /* Activity.swift in Sources */,
 				337EAAAB20EF9808003038D1 /* Climbing.swift in Sources */,
 				3304613E20EE251400D574C8 /* ViewController.swift in Sources */,
 				337EAAAD20EF9839003038D1 /* AdditionalProtocols.swift in Sources */,
+				337EAAB220EFBA03003038D1 /* TodayViewController.swift in Sources */,
 				337EAAA720EF97E4003038D1 /* Running.swift in Sources */,
 				337EAAA120EF97C2003038D1 /* Friend.swift in Sources */,
 				337EAAA520EF97DE003038D1 /* Yoga.swift in Sources */,

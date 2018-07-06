@@ -37,6 +37,7 @@ class OnboardingTableViewController: UITableViewController {
             return
         }
         User.current = user
+        dismiss(animated: true, completion: nil)
     }
 
     @IBAction func birthDateDidChange(_ sender: Any) {
@@ -52,7 +53,8 @@ class OnboardingTableViewController: UITableViewController {
         guard birthDatePicker.date.yearsToToday() > 6 else { return nil }
 
         let user = User(gender: gender, pseudo: pseudo, weight: weight, height: height, birthDate: birthDatePicker.date)
-
+        user.restingHeartRate = 60
+        
         return user
     }
 
